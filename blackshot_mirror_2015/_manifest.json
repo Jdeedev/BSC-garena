@@ -1,0 +1,10 @@
+{
+  "domain": "blackshot.garena.com",
+  "from": "20150101",
+  "to": "20151231",
+  "include": "/(home|info|guides|downloads|news|ranking|images|img|assets|css|js|media)/",
+  "total_urls": 183,
+  "ok": 176,
+  "fail": 0,
+  "skipped": 7
+}
