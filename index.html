@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecionando…</title>
-<meta http-equiv="refresh" content="0; url=home/index.html">
-<link rel="canonical" href="home/index.html">
-<script>
-  location.replace("home/index.html");
-</script>
-<p>Se não redirecionar, clique aqui: <a href="home/index.html">Ir para o site</a></p>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>BlackShot (2015)</title>
+
+  <!-- Base aponta para o snapshot da Wayback: TODOS os /css, /js, /images vão carregar de lá -->
+  <base href="https://web.archive.org/web/20150709083151/http://blackshot.garena.com/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* Só pra evitar barra do GH Pages piscando branco */
+    html,body{background:#000;margin:0}
+  </style>
+</head>
+<body>
+  <!-- Carrega a home original do site (conteúdo da rota /home) -->
+  <script>
+    // redireciona para /home/ mantendo o <base> já definido
+    if (!/\/home\/?$/.test(location.pathname)) location.href = "home/";
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=home/">
+    <p style="color:#fff">Open <a href="home/">home/</a></p>
+  </noscript>
+</body>
+</html>
